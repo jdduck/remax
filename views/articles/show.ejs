@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/modal-styles.css" />
+    <title>I like it!</title>
+  </head>
+  <body>
+    <%- include('_navbar') %>
+    <div class="container">
+      <p><%= article.headline %></p>
+      <img
+        src="<%= article.imgURL %>"
+        onerror="this.src= '/storage/default.jpg'"
+        name="showcase"
+        style="max-width: 500px"
+      />
+      <div class="showcard-container">
+        <div class="description"><%- article.description %></div>
+        <div class="description"><%- article.address %></div>
+        <div class="markdown"><%- article.markdown %></div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer"><%- include('_mtg-calculator') %>
+        
+        <button onclick="codeAddress( '<%= article.address %>' )" data-modal-target="#map-modal" class="std-btn">Show Map
+          <img src="/images/img/location.png" class="icon" style= 'height: 30px;margin-left: 5px;' alt="" />
+        </button>
+        <p><%- include('_google-maps') %></p>
+      </div>
+    </footer>
+  </body>
+</html>

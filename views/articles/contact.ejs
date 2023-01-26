@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/stylesheets/modal-styles.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/contact-styles.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/contact-app.js" defer></script>
+  </head>
+  <body>
+    <%- include('_navbar') %>
+    <div class="container">
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Whether you're looking to buy or sell, I would love to help you with
+            your real estate needs.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="/images/img/location.png" class="icon" alt="" />
+              <p>
+                1310 US Hwy 50 West, Pueblo, CO 81008
+                <button onclick="codeAddress( '1310 US-50, Pueblo, CO 81008' )" data-modal-target="#map-modal" class="std-btn">Show Map
+                </button>
+                <p> <%- include('_google-maps') %></p>
+              </p>
+              <div id="overlay"></div>
+            </div>
+            <div class="information">
+              <img src="/images/img/email.png" class="icon" alt="" />
+              <p>lorem@ipsum.com</p>
+            </div>
+            <div class="information">
+              <img src="/images/img/phone.png" class="icon" alt="" />
+              <p>(719)240-4733</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <!-- <form action="index.html" autocomplete="off"> -->
+          <form action="/articles/contact" method="POST">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" id="name" name="name" class="input" />
+              <label for="name">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" id="email" name="email" class="input" />
+              <label for="email">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="text" id="subject" name="subject" class="input" />
+              <label for="subject">Subject</label>
+              <span>Subject</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea id="message" class="input" name="message"></textarea>
+              <label for="message">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

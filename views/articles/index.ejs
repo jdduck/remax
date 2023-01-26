@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+   <script src="script-slider.js" defer></script>
+    <title>ReMax Mark Chorak</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <%- include('_navbar') %>
+    <div class="hero">
+      <img src="/images/riverwalk.jpg" alt="Billboard" />
+    </div>
+    <div class="portrait-banner">
+      <img src="/images/MarkChorak.webp" alt="" />
+      <div style="display: flex; flex-direction: column">
+        <div class="caption">
+          Pueblo Association of Realtors<br />
+          Salesperson of the Year 2006 & 2019<br />
+          RE/MAX Hall of Fame - Inducted 2017
+        </div>
+        <div class="social-bar">
+          <a href="https://www.facebook.com/MarkChorak1/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCItLnxBK3v_TSyk6QV6Qy6g">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/markchorak/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/markchorak?original_referer=https%3A%2F%2Fwww.markchorak.com%2F"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="listingHdr">
+      <!-- <img src="//unsplash.it/300/599" alt=""> -->
+      <h3>Homes and properties for sale in the Pueblo, Colorado area</h3>
+    </div>
+    <div class="slide-container">
+      <button class="handle left-handle">
+        <div class="text">&#8249;</div>
+      </button>
+      <div class="slider">
+        <% articles.forEach(article => {%>
+        <div class="card">
+          <a href="articles/<%= article.slug %>">
+            <div
+              class="card-img"
+              style="background-image: url('<%= article.imgURL %>')"
+            >
+              <div class="card-content">
+                <div class="card-body">
+                  <h8 class="card-title"><%= article.headline %></h8>
+                  <div class="card-text">
+                    <p>
+                      <%= article.description %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <% }) %>
+      </div>
+      <button class="handle right-handle">
+        <div class="text">&#8250;</div>
+      </button>
+    </div>
+    <div class="home-content"></div>
+    <%- include('_footer') %>
+  </body>
+  <script>
+  const googleFont = document.querySelector('link[rel="stylesheet"][href*="fonts.googleapis.com"]');
+    if (googleFont) {
+    googleFont.remove();
+  }</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Admin-Add Picture</title>
+  </head>
+  
+  <body>
+    <%- include('_navbar') %>
+    <div class="container">
+      <h1>Please choose an image</h1>
+      <form
+        action="/articles/uploader?isNew=new"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="imgURL">Showcase</label>
+        <input 
+          type="file"
+          name="imgURL"
+        />
+        <button type="submit" class="std-btn">Save Image</button>
+      </form>
+    </body>
+</html>

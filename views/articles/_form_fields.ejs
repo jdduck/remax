@@ -1,0 +1,30 @@
+<div class="listing-detail-form">
+  <div class="form-group">
+    <input type="hidden" required value="<%= article.imgURL %>" name="imgURL" />
+
+    <label for="headline">Headline: </label>
+    <input
+      required
+      value="<%= article.headline %>"
+      name="headline"
+      id="headline"
+    />
+
+    <label for="Address">Address:</label>
+    <textarea required name="address" id="address">
+    <%= article.address %></textarea>  
+
+    <label for="description">Description: </label>
+    <textarea name="description" id="description">
+    <%= article.description %></textarea>
+
+    <label for="markdown">Listing Details: </label>
+    <textarea required name="markdown" id="markdown">
+    <%= article.markdown %></textarea>
+
+  </div>
+  <div class="flex-con">
+    <a href="/" class="std-btn">Cancel</a>
+    <button type="submit" class="std-btn">Submit</button>
+  </div>
+</div>

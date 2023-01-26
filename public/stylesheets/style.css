@@ -1,0 +1,444 @@
+:root {
+  --clr-neutral-900: hsl(207, 19%, 9%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-accent-400: hsl(142, 90%, 61%);
+  --clr-bg: hsl(1, 71%, 16%);
+  scrollbar-width: none; /* Firefox */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  height: 100vh;
+  max-width: 1000px;
+  background-image: linear-gradient(#e7eff7, hsl(335, 24%, 55%, 0.5));
+  background-repeat: no-repeat;
+  -ms-overflow-style: none; /* IE and Edge */
+  margin-top: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.std-btn {
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #6584a1;
+  color: white;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.backbtn {
+  font-size: 1.5rem;
+  color: aliceblue;
+  max-width: 5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  margin: 1.5rem 0;
+}
+
+.hero {
+  display: flex;
+}
+
+.hero > img {
+  max-width: 1000px;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+.portrait-banner {
+  display: flex;
+  gap: 5px;
+  align-items: end;
+  justify-content: start;
+  max-width: 1000px;
+  margin: -100px 0 0 15px;
+}
+
+.caption {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.social-bar {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.social-bar i {
+  color: hsl(335, 24%, 35%);
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.listingHdr {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+/*      Show.ejs styles    */
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.container p {
+  margin: 16px 16px 16px 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* *********** edit.ejs container ******** */
+.container input,
+.custom-file-input {
+  border: none;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.showcard-container {
+  background-color: #d6e4e3;
+  margin: 1rem;
+}
+
+.showcard-container div {
+  border-bottom: 1px rgb(126, 123, 123) solid;
+}
+
+.listing-detail-form {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-detail-form textarea,
+.listing-detail-form input {
+  border: none;
+  margin-bottom: 0.5rem;
+  font: inherit;
+  padding: 0.25rem;
+}
+
+.flex-con {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Dashboard Styling */
+.gaugeWindow {
+  height: 15vh;
+}
+
+/* xxxxxxxxxxxxx SLIDER STYLING xxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+:root {
+  --handle-size: 2rem;
+  --img-gap: 0.25rem;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.slider {
+  --items-per-screen: 4;
+  --slider-index: 0;
+  display: flex;
+  width: 90%;
+  margin: 0 var(--img-gap);
+  transform: translateX(calc(var(--slider-index) * -100%));
+  transition: transform 250ms ease-in-out;
+}
+
+.card {
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  flex: 0 0 calc(100% / var(--items-per-screen));
+  max-width: calc(100% / var(--items-per-screen));
+  min-width: 0;
+  min-height: 15em;
+  padding: var(--img-gap);
+  border-radius: 0.25rem;
+}
+
+.card:hover {
+  transform: scale(1.07);
+  transition: transform 250ms ease;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.card a {
+  height: 100%;
+  text-decoration: none;
+}
+
+.card-img {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* aspect-ratio: 16 / 9; */
+}
+
+.card-content {
+  padding: 35% 0 0;
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255 255 255 / 0.8);
+  --padding: 0.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.2) 10%,
+    hsl(0 0% 0% / 1)
+  );
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--padding) * -1);
+  bottom: 0;
+  height: 3px;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+  transform: scaleX(1);
+}
+
+.card-text {
+  font-size: 0.7rem;
+}
+
+@media (hover) {
+  .card-body {
+    height: 100%;
+    transform: translateY(75%);
+    transition: transform 500ms ease;
+  }
+  .card:hover .card-body,
+  .card:focus-within .card-body {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .card:focus-within .card-body {
+    transition-duration: 0ms;
+  }
+
+  .card-body > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-body > *:not(.card-title),
+  .card:focus-within .card-body > *:not(.card-title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+
+  .card-title::after {
+    transform: scaleX(0);
+  }
+}
+
+/********** Footer Styling ***************/
+
+.footer a img {
+  width: 3rem;
+}
+
+.footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(335, 24%, 55%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.kudos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kudos img {
+  max-height: 30px;
+  margin: 0 0.5em;
+}
+
+.kudos-text {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #100525;
+}
+
+.row-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.dialer,
+.mls-app {
+  --bg-color: hsl(335, 24%, 35%);
+  background-color: var(--bg-color);
+  padding: 0.25rem;
+  border-radius: 0.25em;
+}
+
+.dialer a,
+.mls-app a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* ###################  Buttons used on admin page ############### */
+
+.admin-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-btn {
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  background-color: #d7d7d7;
+  background: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+  border: 1px solid #6aa;
+  border-width: 1px 1px 1px 1px;
+  padding: 0.2rem;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 1),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+  color: #d5f3fcde;
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: Verdana;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* ######### More Slider Styling ############### */
+
+.handle {
+  border: none;
+  border-radius: 0.25rem;
+  flex: 0 1 calc(var(--handle-size));
+  background-color: rgba(16, 44, 80, 0.4);
+  z-index: 10;
+  margin: var(--img-gap) 0;
+  padding: 0 0.25rem;
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  line-height: 0;
+  transition: background-color 150ms ease-in-out;
+}
+
+.left-handle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.right-handle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.handle:hover,
+.handle:focus {
+  background-color: rgba(12, 75, 158, 0.3);
+}
+
+.text {
+  transition: transform 150ms ease-in-out;
+}
+
+.handle:hover .text,
+.handle:focus .text {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .slider {
+    --items-per-screen: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    --items-per-screen: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    --items-per-screen: 1;
+  }
+}
