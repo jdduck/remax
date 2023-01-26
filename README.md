@@ -1,1 +1,3 @@
 # remax
+
+This is my first genuine attempt to create an application on Node/Express.... It will hopefully be used by a good friend of mine who just became a Remax agent... It is a hodge-podge of a lot of different tutorials WebDev Simplified and Traversy Media among others... I think I have upheld my end by sewing the different projects together... I know I have a hell of a lot to learn... 
