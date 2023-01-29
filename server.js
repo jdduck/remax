@@ -13,11 +13,11 @@ const PORT = process.env.PORT || 5000;
 
 // connect via cloud atlas
 
-// const db = mongoose.connect("mongodb+srv://jon:ducksDux283@cluster0.ssob2rk.mongodb.net/listings");
+const db = mongoose.connect("mongodb+srv://jon:ducksDux283@cluster0.ssob2rk.mongodb.net/listings");
 
 // local connection
 
-const db = mongoose.connect("mongodb://127.0.0.1:27017/listings");
+// const db = mongoose.connect("mongodb://127.0.0.1:27017/listings");
 
 app.use(compression()); //compress all routes
 app.use(express.static("public"));
