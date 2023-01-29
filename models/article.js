@@ -6,8 +6,6 @@ const { JSDOM } = require('jsdom')
 const { type } = require('express/lib/response')
 const dompurify = createDomPurify(new JSDOM().window)
 
-mongoose.set('strictQuery', false)
-
 const articleSchema = new mongoose.Schema({
     
     imgURL: {

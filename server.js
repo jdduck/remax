@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 5000;
 
 // connect via cloud atlas
 
+mongoose.set('strictQuery', true)
+
 const db = mongoose.connect("mongodb+srv://jon:ducksDux283@cluster0.ssob2rk.mongodb.net/listings");
 
 // local connection
