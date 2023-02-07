@@ -127,12 +127,8 @@ header {
 }
 
 .showcard-container {
-  background-color: #d6e4e3;
+  line-height: 1.5;
   margin: 1rem;
-}
-
-.showcard-container div {
-  border-bottom: 1px rgb(126, 123, 123) solid;
 }
 
 .listing-detail-form {
